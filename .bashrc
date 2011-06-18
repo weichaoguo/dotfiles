@@ -52,9 +52,9 @@ function seperator {
     COLOR=$BLD$RED
   fi
 
-  if [[ $timer_result > 60 ]]; then
+  if [[ $timer_result -gt 60 ]]; then
     echo "${RED}>>> elapsed time ${timer_result}s"
-  elif [[ $timer_result > 10 ]]; then
+  elif [[ $timer_result -gt 10 ]]; then
     echo "${MAG}>>> elapsed time ${timer_result}s"
   fi
 
