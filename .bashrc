@@ -10,7 +10,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 source ~/.git-completion.sh
 
 # handy alias for ls
-alias ls="ls -G"
+alias ls="ls -Gp"
 alias l="ls -CF"
 alias ll="ls -alF"
 
