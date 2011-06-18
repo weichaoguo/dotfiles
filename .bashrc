@@ -1,0 +1,88 @@
+# ~/.bashrc: executed by bash(1) for non-login shells.
+#
+# Written by Santa Zhang <santa1987@gmail.com>, 2011-06
+# With inspiration from:
+#   http://github.com/spladug/.dotfiles/blob/master/.bashrc
+
+export GIT_PS1_SHOWDIRTYSTATE=1
+
+# enable git auto completion
+source ~/.git-completion.sh
+
+# handy alias for ls
+alias ls="ls -G"
+alias l="ls -CF"
+alias ll="ls -alF"
+
+# colorized prompt
+if [ -x /usr/bin/tput ] && tput setaf 1 >& /dev/null; then
+  # we have color support
+  color_prompt=yes
+  export "HI"
+else
+  color_prompt=
+fi
+
+if [ "$color_prompt" = yes ]; then
+  BLD=$(tput bold)
+  RST=$(tput sgr0)
+  RED=$(tput setaf 1)
+  GRN=$(tput setaf 2)
+  YLW=$(tput setaf 3)
+  BLU=$(tput setaf 4)
+  MAG=$(tput setaf 5)
+  CYN=$(tput setaf 6)
+  WHT=$(tput setaf 7)
+else
+  BLD=""
+  RST=""
+  RED=""
+  GRN=""
+  YLW=""
+  BLU=""
+  MAG=""
+  CYN=""
+  WHT=""
+fi
+
+function seperator {
+  if [ $? -eq 0 ]; then
+    COLOR=$BLD$GRN
+  else
+    COLOR=$BLD$RED
+  fi
+
+  if [[ $timer_result > 60 ]]; then
+    echo "${RED}>>> elapsed time ${timer_result}s"
+  elif [[ $timer_result > 10 ]]; then
+    echo "${MAG}>>> elapsed time ${timer_result}s"
+  fi
+
+  echo -n $COLOR
+  case $OSTYPE in
+    linux-gnu*)
+      printf '_%.0s' `seq 1 $COLUMNS`
+      ;;
+    darwin*)
+      jot -s "" -b "_" $COLUMNS -n
+      ;;
+  esac
+  echo -n $RST
+}
+
+function timer_start {
+  timer=${timer:-$SECONDS}
+}
+
+function timer_stop {
+  timer_result=$(($SECONDS - $timer))
+  unset timer
+}
+
+trap 'timer_start' DEBUG
+PROMPT_COMMAND=timer_stop
+
+export PS1='$(seperator)\n${MAG}\u${RST}@${MAG}\h${RST} in ${BLU}\w$(__git_ps1 "${RED} on branch %s")${RST}\n\$ '
+
+# custom PATH env
+export PATH=/opt/scala/bin:$PATH
