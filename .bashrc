@@ -86,3 +86,5 @@ export PS1='$(seperator)\n${MAG}\u${RST}@${MAG}\h${RST} in ${BLU}\w$(__git_ps1 "
 
 # custom PATH env
 export PATH=/opt/scala/bin:$PATH
+
+export PYTHONPATH=/Library/Python/2.6/site-packages:$PYTHON_PATH

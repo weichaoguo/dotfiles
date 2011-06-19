@@ -19,6 +19,9 @@ let g:pydiction_location = '~/.vim/bundle/pydiction_v1.2/complete-dict'
 let Tlist_Use_Right_Window=1
 let Tlist_Auto_Open=1
 
+" for syntax highlight in c.vim
+let c_C99=1
+
 " enable filetype plugin
 if has("eval")
   filetype plugin on
@@ -143,11 +146,8 @@ set scrolloff=4
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
-" enable syntax 
+" enable syntax
 syntax on
-
-let g:solarized_termtrans=1
-let g:solarized_contrast="high"
 
 " use color scheme
 colorscheme SantaZhang
