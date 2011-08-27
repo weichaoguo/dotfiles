@@ -8,6 +8,7 @@ home = os.getenv("HOME")
 
 def my_exec(cmd):
   print cmd
+  os.system(cmd)
 
 for e in os.listdir("."):
   if e.startswith("_"):
