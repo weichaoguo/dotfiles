@@ -15,8 +15,6 @@
 import os
 import sys
 
-ignore_files = ["install.py", ".DS_Store", ".git"]
-
 home = os.getenv("HOME")
 
 def my_exec(cmd):
@@ -24,21 +22,22 @@ def my_exec(cmd):
   os.system(cmd)
 
 for e in os.listdir("."):
-  if e not in ignore_files:
+  if e.startswith("_"):
+    f = "." + e[1:]
     if os.path.isdir(e):
       print "# dir: " + e
       if "--no-backup" not in sys.argv:
-        my_exec('rm -rf "%s"' % os.path.join(home, e + ".backup"))
-        my_exec('mv "%s" "%s"' % (os.path.join(home, e), os.path.join(home, e + ".backup")))
+        my_exec('rm -rf "%s"' % os.path.join(home, f + ".backup"))
+        my_exec('mv "%s" "%s"' % (os.path.join(home, f), os.path.join(home, f + ".backup")))
       else:
-        my_exec('rm -rf "%s"' % os.path.join(home, e))
-      my_exec('cp -r "%s" "%s"' % (e, home))
+        my_exec('rm -rf "%s"' % os.path.join(home, f))
+      my_exec('cp -r "%s" "%s"' % (e, os.path.join(home, f)))
     else:
       print "# file: " + e
       if "--no-backup" not in sys.argv:
-        my_exec('rm -f "%s"' % os.path.join(home, e + ".backup"))
-        my_exec('mv "%s" "%s"' % (os.path.join(home, e), os.path.join(home, e + ".backup")))
+        my_exec('rm -f "%s"' % os.path.join(home, f + ".backup"))
+        my_exec('mv "%s" "%s"' % (os.path.join(home, f), os.path.join(home, f + ".backup")))
       else:
-        my_exec('rm -f "%s"' % os.path.join(home, e))
-      my_exec('cp "%s" "%s"' % (e, home))
+        my_exec('rm -f "%s"' % os.path.join(home, f))
+      my_exec('cp "%s" "%s"' % (e, os.path.join(home, f)))
 
