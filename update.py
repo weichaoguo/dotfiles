@@ -6,9 +6,14 @@ import sys
 
 home = os.getenv("HOME")
 
+if len(sys.argv) > 1:
+  os.chdir(sys.argv[1])
+
 def my_exec(cmd):
   print cmd
   os.system(cmd)
+
+print "Updating to %s" % os.getcwd()
 
 for e in os.listdir("."):
   if e.startswith("_"):
