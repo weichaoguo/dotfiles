@@ -1,0 +1,23 @@
+[user]
+	name = Santa Zhang
+	email = santa1987@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = true
+	pager = true
+[color "branch"]
+	current = blue bold
+	local = blue
+	remote = green
+[color "diff"]
+	meta = blue bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]	
+	added = blue
+	changed = magenta
+	untracked = red

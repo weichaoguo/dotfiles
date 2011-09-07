@@ -2,10 +2,10 @@
 
 # Santa Zhang <santa1987@gmail.com>
 #
-# installer for my mac-dotfiles
+# installer for my dotfiles
 #
 # usage:
-#   ./install.py
+#   ./install.py [subdir]
 #       install the dot files into HOME dir, and do backup for each overwritten files/folders
 #
 #   ./install.py --no-backup
@@ -17,9 +17,14 @@ import sys
 
 home = os.getenv("HOME")
 
+if len(sys.argv) > 1:
+  os.chdir(sys.argv[1])
+
 def my_exec(cmd):
   print cmd
   os.system(cmd)
+
+print "Installing from %s" % os.getcwd()
 
 for e in os.listdir("."):
   if e.startswith("_"):
