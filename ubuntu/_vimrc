@@ -149,8 +149,9 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 " enable syntax
 syntax on
 
-" use color scheme
-colorscheme SantaZhang
-
+" for linux
 set bg=dark
+
+" use color scheme
+"colorscheme SantaZhang
 
