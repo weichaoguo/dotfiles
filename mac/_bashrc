@@ -95,5 +95,8 @@ done
 
 # custom PATH env
 export PATH=/Users/santa/Workspace/toolkit:$PATH
-
 export PYTHONPATH=/Library/Python/2.6/site-packages:$PYTHON_PATH
+
+export VISUAL=vim
+export EDITOR=vim
+

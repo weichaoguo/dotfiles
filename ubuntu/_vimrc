@@ -77,7 +77,8 @@ set shiftwidth=4
 set tabstop=4
 
 " enable mouse in all modes
-set mouse=a
+"set mouse=a
+set mouse=
 
 " automatically read file when it is changed from the outside
 set autoread
@@ -149,8 +150,9 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 " enable syntax
 syntax on
 
-" use color scheme
-colorscheme SantaZhang
-
+" for linux
 set bg=dark
+
+" use color scheme
+"colorscheme SantaZhang
 
