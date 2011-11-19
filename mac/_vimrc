@@ -70,6 +70,7 @@ set hidden
 "set nowrap
 
 " set tab and spaces
+" per-language preference could be set in ~/.vim/ftplugin/<lang>.vim
 set softtabstop=4
 set expandtab
 set smartindent
@@ -151,4 +152,5 @@ syntax on
 
 " use color scheme
 colorscheme SantaZhang
+"colorscheme developer
 
