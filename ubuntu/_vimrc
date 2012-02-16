@@ -50,8 +50,8 @@ let python_slow_sync=1
 "autocmd VimEnter * wincmd p
 
 " hide generated files from NERDTree
-let NERDTreeIgnore=['\.pyc$', '\~$', '\.o', '\.so', '\.class']
-set wildignore+=*.pyc,*~,*.o,*.so,*.class
+let NERDTreeIgnore=['\.pyc$', '\~$', '\.o$', '\.so$', '\.class$', '\.ko$', '\.mod.c$', '\.symvers', '\.order', '^moc_', '^ui_']
+set wildignore+=*.pyc,*~,*.o,*.so,*.class,*.ko,*.mod.c,*.symvers,*.order,moc_*,ui_*
 
 " highlight columns which are too long
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
