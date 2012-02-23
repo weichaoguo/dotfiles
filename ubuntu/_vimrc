@@ -51,7 +51,7 @@ let python_slow_sync=1
 
 " hide generated files from NERDTree
 let NERDTreeIgnore=['\.pyc$', '\~$', '\.o$', '\.so$', '\.class$', '\.ko$', '\.mod.c$', '\.symvers', '\.order', '^moc_', '^ui_']
-set wildignore+=*.pyc,*~,*.o,*.so,*.class,*.ko,*.mod.c,*.symvers,*.order,moc_*,ui_*
+set wildignore+=*.pyc,*~,*.o,*.so,*.class,*.ko,*.mod.c,*.symvers,*.order,moc_*,ui_*,*/.git/*,*/.svn/*,*/.hg/*,.DS_Store
 
 " highlight columns which are too long
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
