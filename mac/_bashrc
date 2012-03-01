@@ -94,9 +94,10 @@ for i in $(jot 5 1); do
 done
 
 # custom PATH env
+export PATH=/Users/santa/Dropbox/Backups:$PATH
 export PATH=/Users/santa/Workspace/toolkit:$PATH
-export PATH=/Users/santa/Public/android-ndk-r6b:$PATH
-export PATH=/Users/santa/Public/android-sdks/platform-tools:$PATH
+export PATH=/Developer/android-ndk-r6b:$PATH
+export PATH=/Developer/android-sdks/platform-tools:$PATH
 export PYTHONPATH=/Library/Python/2.6/site-packages:$PYTHON_PATH
 
 export VISUAL=vim
