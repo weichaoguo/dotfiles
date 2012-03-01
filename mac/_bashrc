@@ -96,6 +96,7 @@ done
 # custom PATH env
 export PATH=/Users/santa/Workspace/toolkit:$PATH
 export PATH=/Developer/android-ndk-r6b:$PATH
+export PATH=/Developer/android-sdks/tools:$PATH
 export PATH=/Developer/android-sdks/platform-tools:$PATH
 export PYTHONPATH=/Library/Python/2.6/site-packages:$PYTHON_PATH
 
