@@ -94,7 +94,6 @@ for i in $(jot 5 1); do
 done
 
 # custom PATH env
-export PATH=/Users/santa/Dropbox/Backups:$PATH
 export PATH=/Users/santa/Workspace/toolkit:$PATH
 export PATH=/Developer/android-ndk-r6b:$PATH
 export PATH=/Developer/android-sdks/platform-tools:$PATH
