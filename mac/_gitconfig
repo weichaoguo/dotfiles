@@ -1,6 +1,6 @@
 [user]
-	name = Santa Zhang
-	email = santa1987@gmail.com
+	name = Vector Guo
+	email = vectorguo@gmail.com
 [color]
 	diff = auto
 	status = auto
@@ -22,7 +22,7 @@
 	changed = magenta
 	untracked = red
 [core]
-	excludesfile = /Users/santa/.gitignore_global
+	excludesfile = /Users/guoweichao2010/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

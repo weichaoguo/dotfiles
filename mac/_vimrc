@@ -1,5 +1,5 @@
-" This is Santa Zhang's vimrc file.
-" santa1987@gmail.com
+" This is Vector Guo's vimrc file.
+" vectorguo@gmail.com
 "
 " some inspirations from
 "   http://nvie.com/posts/how-i-boosted-my-vim
@@ -148,6 +148,5 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 syntax on
 
 " use color scheme
-colorscheme SantaZhang
-"colorscheme developer
+colorscheme developer
 

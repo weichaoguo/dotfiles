@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Santa Zhang <santa1987@gmail.com>
+# Vectorguo <vectorguo@gmail.com>
 #
 # installer for my dotfiles
 #

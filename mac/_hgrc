@@ -3,9 +3,9 @@ hgext.purge=
 hgext.bookmarks=
 
 [ui]
-username=Santa Zhang <santa1987@gmail.com>
+username=Vector Guo <vectorguo@gmail.com>
 
-ignore=/Users/santa/.hgignore_global
+ignore=/Users/guoweichao2010/.hgignore_global
 [merge-tools]
 sourcetreemerge.gui=False
 sourcetreebulkmerge.gui=False
