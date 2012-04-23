@@ -1,6 +1,7 @@
 # .* files in my $HOME
 
-Santa Zhang <santa1987@gmail.com>
+Vector Guo <vectorguo@gmail.com>
+Based on dotfile written by Santa Zhang <santa1987@gmail.com>
 
 ## How to install
 
